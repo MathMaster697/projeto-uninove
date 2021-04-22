@@ -11,7 +11,7 @@
         <script src="jquery.js"></script>
         <script src="jquery.validate.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        
+        <script src="api.js"></script>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -52,39 +52,7 @@
 						<p>
 							A nossa intenção é ajudar você a descobrir e saber como está a situação do seu CNPJ com essa busca simples e rápida.</p>
 							<p>Queremos que sua empresa seja dez e apta para ser a melhor no mercado brasileiro!</p>
-							<br>
-						<script>
-							$(document).ready(function(){
-    $('#pesquisar').on('click', function(e) {
-        e.preventDefault();
-        var cnpj = $('#cnpj').val().replace(/[^0-9]/g, '');
-        if(cnpj.length == 14) {
-            $.ajax({
-                url:'https://www.receitaws.com.br/v1/cnpj/' + cnpj,
-                method:'GET',
-                dataType: 'jsonp',
-                complete: function(xhr){
-                    response = xhr.responseJSON;
-                    if(response.status == 'OK') {
-                        $('#razao').val(response.nome);
-                        $('#nome').val(response.fantasia);
-                        $('#logradouro').val(response.logradouro);
-                        $('#numero').val(response.numero);
-                        $('#cep').val(response.cep);
-                        $('#situacao').val(response.situacao);
-                        $('#bairro').val(response.bairro);
-                        $('#municipio').val(response.municipio);
-                    } else {
-                        alert(response.message);
-                    }
-                }
-            });
-        } else {
-            alert('CNPJ inválido');
-        }
-    });
-});
-						</script>						
+							<br>					
 						<form id="formu"></form>
 						<fieldset style="background: lightblue" id="first">
 						<br><label for="cnpj" style="font-family: sans-serif; color: #ef8376; font-weight:600;">CNPJ</label><br>
