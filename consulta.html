@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Formulario</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css">
+    <script src="jquery.js"></script>
+    <script src="jquery.validate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="api.js"></script>
+</head>
+<body style="background: lightblue">
+    <form class="formu"></form>
+    <fieldset style="background: lightblue" id="first">
+    <br><label for="cnpj" style="font-family: sans-serif; color: #ef8376; font-weight:600;" id="nois">CNPJ</label><br><br>
+    <input id="cnpj" type="text" name="cnpj" size="50" maxlength="14" style="margin-right:20px; border: 0; border-radius: 0.5em; padding: 1em; width: 50%;" value=""/><br><br><br>
+    <input id="pesquisar" type="button" name="pesqui" value="Pesquisar"><br><br>
+    <br><label id="bonito" for="razao" style="font-family: sans-serif; color: #ef8376; font-weight:600;">Razão social</label><br><br>
+    <input id="razao" type="text" name="razao" size="50" maxlength="50" style="border: 0; border-radius: 0.5em; padding: 1em; width: 50%;"><br/><br/><br>
+    <label id="que" for="nome" style="font-family: sans-serif; color: #ef8376; font-weight:600;">Nome</label><br><br>
+    <input id="nome" type="text" name="nome" size="35" maxlength="50" style="border: 0; border-radius: 0.5em; padding: 1em; width: 50%;"><br/><br/><br>
+    <label id="eu" for="logradouro" style="font-family: sans-serif; color: #ef8376; font-weight:600;">Logradouro</label><br><br>
+    <input id="logradouro" type="text" name="Logradouro" size="35" maxlength="50" style="border: 0; border-radius: 0.5em; padding: 1em; width: 50%;"><br/><br><br>
+    <label id="lindo" for="numero" style="font-family: sans-serif; color: #ef8376; font-weight:600;">Número</label><br><br>
+    <input id="numero" type="text" name="Logradouro" size="35" maxlength="50" style="border: 0; border-radius: 0.5em; padding: 1em; width: 50%;"><br/><br><br>
+    <label id="oque" for="cep" style="font-family: sans-serif; color: #ef8376; font-weight:600;">CEP</label><br><br>
+    <input id="cep" type="text" name="cnpj" size="35" maxlength="14" style="border: 0; border-radius: 0.5em; padding: 1em; width: 50%;"><br><br><br>
+    <label id="meu" for="situacao" style="font-family: sans-serif; color: #ef8376; font-weight:600;">Situação Cadastral</label><br><br>
+    <input id="situacao" type="text" name="Logradouro" size="35" maxlength="50" style="border: 0; border-radius: 0.5em; padding: 1em; width: 50%;"><br><br><br>
+    <label id="nossa" for="bairro" style="font-family: sans-serif; color: #ef8376; font-weight:600;">Bairro</label><br><br>
+    <input id="bairro" type="text" name="Logradouro" size="35" maxlength="50" style="border: 0; border-radius: 0.5em; padding: 1em; width: 50%;"><br><br><br>
+    <label id="ue" for="municipio" style="font-family: sans-serif; color: #ef8376; font-weight:600;">Municipio</label><br><br>
+    <input id="municipio" type="text" name="Logradouro" size="35" maxlength="50" style="border: 0; border-radius: 0.5em; padding: 1em; width: 50%;"><br><br>
+    </fieldset>
+    <style>
+        label#nois{
+            position: absolute;
+            left: 50%;
+            width: 28%;
+            top: 100;
+            text-align: justify;
+            border-width: 0;
+        }
+        input#cnpj{
+            position: absolute;
+            left: 25%;
+            width: 28%;
+            top: 100;
+            text-align: justify;
+            border-width: 0; 
+        }
+        input#pesquisar{
+            position: absolute;
+            left: 44%;
+            width: 15%;
+            top: 100;
+            background-color:#ef8376;
+            font-size: 1em;
+            padding: 4px;
+            -moz-border-radius: 8px;
+            -webkit-border-radius: 8px;
+            border-top: 1px solid #900;
+        }
+        label#bonito{
+            position: absolute;
+            left: 48%;
+            width: 28%;
+            top: 100;
+            text-align: justify;
+            border-width: 0;
+        }
+        input#razao{
+            position: absolute;
+            left: 25%;
+            width: 28%;
+            top: 100;
+            text-align: justify;
+            border-width: 0;  
+        }
+        label#que{
+            position: absolute;
+            left: 50%;
+            width: 28%;
+            top: 100;
+            text-align: justify;
+            border-width: 0;
+        }
+        input#nome{
+            position: absolute;
+            left: 25%;
+            width: 28%;
+            top: 100;
+            text-align: justify;
+            border-width: 0;  
+        }
+        label#eu{
+            position: absolute;
+            left: 48%;
+            width: 28%;
+            top: 100;
+            text-align: justify;
+            border-width: 0;
+        }
+        input#logradouro{
+            position: absolute;
+            left: 25%;
+            width: 28%;
+            top: 100;
+            text-align: justify;
+            border-width: 0; 
+        }
+        label#lindo{
+            position: absolute;
+            left: 49%;
+            width: 28%;
+            top: 100;
+            text-align: justify;
+            border-width: 0;
+        }
+        input#numero{
+            position: absolute;
+            left: 25%;
+            width: 28%;
+            top: 100;
+            text-align: justify;
+            border-width: 0; 
+        }
+        label#oque{
+            position: absolute;
+            left: 50%;
+            width: 28%;
+            top: 100;
+            text-align: justify;
+            border-width: 0;
+        }
+        input#cep{
+            position: absolute;
+            left: 25%;
+            width: 28%;
+            top: 100;
+            text-align: justify;
+            border-width: 0; 
+        }
+        label#meu{
+            position: absolute;
+            left: 47%;
+            width: 28%;
+            top: 100;
+            text-align: justify;
+            border-width: 0;
+        }
+        input#situacao{
+            position: absolute;
+            left: 25%;
+            width: 28%;
+            top: 100;
+            text-align: justify;
+            border-width: 0; 
+        }
+        label#nossa{
+            position: absolute;
+            left: 50%;
+            width: 28%;
+            top: 100;
+            text-align: justify;
+            border-width: 0; 
+        }
+        input#bairro{
+            position: absolute;
+            left: 25%;
+            width: 28%;
+            top: 100;
+            text-align: justify;
+            border-width: 0; 
+        }
+        label#ue{
+            position: absolute;
+            left: 49%;
+            width: 28%;
+            top: 100;
+            text-align: justify;
+            border-width: 0; 
+        }
+        input#municipio{
+            position: absolute;
+            left: 25%;
+            width: 28%;
+            top: 100;
+            text-align: justify;
+            border-width: 0; 
+        }
+    </style>
+</body>
+</html>
