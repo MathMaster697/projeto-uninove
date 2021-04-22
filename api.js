@@ -1,15 +1,15 @@
 $(document).ready(function(){
-    $('#pesquisar').on('click', function(e){
+    $('#pesquisar').on('click', function(e) {
         e.preventDefault();
         var cnpj = $('#cnpj').val().replace(/[^0-9]/g, '');
-        if(cnpj.length == 14){
+        if(cnpj.length == 14) {
             $.ajax({
-                url: 'https://www.receitaws.com.br/v1/cnpj/' + cnpj,
-                method: 'GET',
+                url:'https://www.receitaws.com.br/v1/cnpj/' + cnpj,
+                method:'GET',
                 dataType: 'jsonp',
                 complete: function(xhr){
                     response = xhr.responseJSON;
-                    if(response.status == 'OK'){
+                    if(response.status == 'OK') {
                         $('#razao').val(response.nome);
                         $('#nome').val(response.fantasia);
                         $('#logradouro').val(response.logradouro);
